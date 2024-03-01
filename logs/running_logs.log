@@ -33,3 +33,100 @@
 [2024-03-01 15:31:57,281: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
 
 x==========x]
+[2024-03-01 15:36:34,784: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-03-01 15:36:34,795: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-03-01 15:36:34,796: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-03-01 15:36:34,798: INFO: common: created directory at: artifacts]
+[2024-03-01 15:36:34,799: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-03-01 15:36:34,801: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file KidneyDiseaseclassfication/research/artifacts/data_ingestion/data.zip]
+[2024-03-01 15:37:07,217: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file KidneyDiseaseclassfication/research/artifacts/data_ingestion/data.zip]
+[2024-03-01 15:37:08,139: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-03-01 15:38:27,725: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-03-01 15:38:27,732: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-03-01 15:38:27,736: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-03-01 15:38:27,737: INFO: common: created directory at: artifacts]
+[2024-03-01 15:38:27,738: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-03-01 15:38:27,744: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-03-01 15:38:56,686: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-03-01 15:38:57,657: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-03-01 15:40:09,381: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-03-01 15:40:09,383: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-03-01 15:40:09,385: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-03-01 15:40:09,386: INFO: common: created directory at: artifacts]
+[2024-03-01 15:40:09,387: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-03-01 15:40:09,390: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-03-01 15:43:49,374: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-03-01 15:43:49,377: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-03-01 15:43:49,380: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-03-01 15:43:49,381: INFO: common: created directory at: artifacts]
+[2024-03-01 15:43:49,382: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-03-01 15:43:49,383: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-03-01 15:50:32,085: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-03-01 15:50:32,088: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-03-01 15:50:32,090: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-03-01 15:50:32,091: INFO: common: created directory at: artifacts]
+[2024-03-01 15:50:32,091: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-03-01 15:50:32,093: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-03-01 15:51:00,190: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-03-01 15:51:01,400: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-03-01 15:58:43,177: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-03-01 15:58:43,186: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-03-01 15:58:43,188: INFO: common: created directory at: artifacts]
+[2024-03-01 15:58:43,190: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-03-01 15:58:44,091: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-03-01 16:01:50,901: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-03-01 16:01:50,907: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-03-01 16:01:50,910: INFO: common: created directory at: artifacts]
+[2024-03-01 16:01:50,912: INFO: common: created directory at: artifacts\training]
+[2024-03-01 16:28:27,515: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-03-01 16:28:27,517: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-03-01 16:28:27,520: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-03-01 16:28:27,520: INFO: common: created directory at: artifacts]
+[2024-03-01 16:28:27,522: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-03-01 16:28:27,523: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-03-01 16:29:11,632: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-03-01 16:29:12,847: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-03-01 16:29:12,848: INFO: main: *******************]
+[2024-03-01 16:29:12,849: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2024-03-01 16:29:12,849: ERROR: main: name 'PrepareBaseModelTrainingPipeline' is not defined]
+Traceback (most recent call last):
+  File "main.py", line 22, in <module>
+    prepare_base_model = PrepareBaseModelTrainingPipeline()
+NameError: name 'PrepareBaseModelTrainingPipeline' is not defined
+[2024-03-01 16:55:01,283: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-03-01 16:55:01,287: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-03-01 16:55:01,291: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-03-01 16:55:01,293: INFO: common: created directory at: artifacts]
+[2024-03-01 16:55:01,294: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-03-01 16:55:01,296: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-03-01 16:56:15,579: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-03-01 16:56:16,639: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-03-01 16:56:16,640: INFO: main: *******************]
+[2024-03-01 16:56:16,640: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2024-03-01 16:56:16,643: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-03-01 16:56:16,645: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-03-01 16:56:16,646: INFO: common: created directory at: artifacts]
+[2024-03-01 16:56:16,647: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-03-01 16:56:17,231: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-03-01 16:56:18,182: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2024-03-01 16:56:18,184: INFO: main: *******************]
+[2024-03-01 16:56:18,185: INFO: main: >>>>>> stage Training started <<<<<<]
+[2024-03-01 16:56:18,191: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-03-01 16:56:18,197: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-03-01 16:56:18,199: INFO: common: created directory at: artifacts]
+[2024-03-01 16:56:18,201: INFO: common: created directory at: artifacts\training]
+[2024-03-01 16:57:11,364: INFO: main: >>>>>> stage Training completed <<<<<<
+
+x==========x]

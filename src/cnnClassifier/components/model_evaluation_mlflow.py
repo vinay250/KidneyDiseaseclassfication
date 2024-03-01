@@ -1,27 +1,22 @@
-import os
-import urllib.request as request
-from zipfile import ZipFile
 import tensorflow as tf
-import time
 from pathlib import Path
-from cnnClassifier.entity.config_entity import TrainingConfig
+import mlflow
+import mlflow.keras
+from urllib.parse import urlparse
+from cnnClassifier.entity.config_entity import EvaluationConfig
+from cnnClassifier.utils.common import read_yaml, create_directories,save_json
 
 
-class Training:
-    def __init__(self, config: TrainingConfig):
+class Evaluation:
+    def __init__(self, config: EvaluationConfig):
         self.config = config
 
     
-    def get_base_model(self):
-        self.model = tf.keras.models.load_model(
-            self.config.updated_base_model_path
-        )
-
-    def train_valid_generator(self):
+    def _valid_generator(self):
 
         datagenerator_kwargs = dict(
             rescale = 1./255,
-            validation_split=0.20
+            validation_split=0.30
         )
 
         dataflow_kwargs = dict(
@@ -41,48 +36,39 @@ class Training:
             **dataflow_kwargs
         )
 
-        if self.config.params_is_augmentation:
-            train_datagenerator = tf.keras.preprocessing.image.ImageDataGenerator(
-                rotation_range=40,
-                horizontal_flip=True,
-                width_shift_range=0.2,
-                height_shift_range=0.2,
-                shear_range=0.2,
-                zoom_range=0.2,
-                **datagenerator_kwargs
-            )
-        else:
-            train_datagenerator = valid_datagenerator
 
-        self.train_generator = train_datagenerator.flow_from_directory(
-            directory=self.config.training_data,
-            subset="training",
-            shuffle=True,
-            **dataflow_kwargs
-        )
-
-    
     @staticmethod
-    def save_model(path: Path, model: tf.keras.Model):
-        model.save(path)
+    def load_model(path: Path) -> tf.keras.Model:
+        return tf.keras.models.load_model(path)
+    
 
+    def evaluation(self):
+        self.model = self.load_model(self.config.path_of_model)
+        self._valid_generator()
+        self.score = self.model.evaluate(self.valid_generator)
+        self.save_score()
 
+    def save_score(self):
+        scores = {"loss": self.score[0], "accuracy": self.score[1]}
+        save_json(path=Path("scores.json"), data=scores)
 
     
-    def train(self):
-        self.steps_per_epoch = self.train_generator.samples // self.train_generator.batch_size
-        self.validation_steps = self.valid_generator.samples // self.valid_generator.batch_size
+    def log_into_mlflow(self):
+        mlflow.set_registry_uri(self.config.mlflow_uri)
+        tracking_url_type_store = urlparse(mlflow.get_tracking_uri()).scheme
+        
+        with mlflow.start_run():
+            mlflow.log_params(self.config.all_params)
+            mlflow.log_metrics(
+                {"loss": self.score[0], "accuracy": self.score[1]}
+            )
+            # Model registry does not work with file store
+            if tracking_url_type_store != "file":
 
-        self.model.fit(
-            self.train_generator,
-            epochs=self.config.params_epochs,
-            steps_per_epoch=self.steps_per_epoch,
-            validation_steps=self.validation_steps,
-            validation_data=self.valid_generator
-        )
-
-        self.save_model(
-            path=self.config.trained_model_path,
-            model=self.model
-        )
-
+                # Register the model
+                # There are other ways to use the Model Registry, which depends on the use case,
+                # please refer to the doc for more information:
+                # https://mlflow.org/docs/latest/model-registry.html#api-workflow
+                mlflow.keras.log_model(self.model, "model", registered_model_name="VGG16Model")
+            else:
+                mlflow.keras.log_model(self.model, "model")

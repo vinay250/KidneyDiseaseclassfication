@@ -1,5 +1,5 @@
 # Kidney-Disease-Classification-MLflow-DVC
-![Image Alt Text](images/dd.jpeg)
+![Image Alt Text](images/kidneys1.jpg)
 
 
 ## Workflows

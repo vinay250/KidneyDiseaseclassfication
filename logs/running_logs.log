@@ -362,3 +362,185 @@ Traceback (most recent call last):
     raise IOError(
 OSError: No file or directory found at model\model.h5
 [2024-03-01 20:53:14,731: INFO: _internal: 127.0.0.1 - - [01/Mar/2024 20:53:14] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2024-03-01 21:03:34,903: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.43.186:8080]
+[2024-03-01 21:03:34,905: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-03-01 21:03:46,377: INFO: _internal: 127.0.0.1 - - [01/Mar/2024 21:03:46] "GET / HTTP/1.1" 200 -]
+[2024-03-01 21:03:52,197: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\HP\anaconda3\envs\kdvenv\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\HP\anaconda3\envs\kdvenv\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\HP\anaconda3\envs\kdvenv\lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\HP\anaconda3\envs\kdvenv\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\HP\anaconda3\envs\kdvenv\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\HP\anaconda3\envs\kdvenv\lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "app.py", line 44, in predictRoute
+    result = clApp.classifier.predict()
+  File "e:\kidneydiseaseclassfication\src\cnnClassifier\pipeline\prediction.py", line 16, in predict
+    model = load_model(os.path.join("model", "model.h5"))
+  File "C:\Users\HP\anaconda3\envs\kdvenv\lib\site-packages\keras\saving\saving_api.py", line 212, in load_model
+    return legacy_sm_saving_lib.load_model(
+  File "C:\Users\HP\anaconda3\envs\kdvenv\lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\HP\anaconda3\envs\kdvenv\lib\site-packages\keras\saving\legacy\save.py", line 230, in load_model
+    raise IOError(
+OSError: No file or directory found at model\model.h5
+[2024-03-01 21:03:52,219: INFO: _internal: 127.0.0.1 - - [01/Mar/2024 21:03:52] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2024-03-01 21:05:27,075: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.43.186:8080]
+[2024-03-01 21:05:27,076: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-03-01 21:05:40,264: INFO: _internal: 127.0.0.1 - - [01/Mar/2024 21:05:40] "GET / HTTP/1.1" 200 -]
+[2024-03-01 21:05:49,442: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\HP\anaconda3\envs\kdvenv\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\HP\anaconda3\envs\kdvenv\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\HP\anaconda3\envs\kdvenv\lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\HP\anaconda3\envs\kdvenv\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\HP\anaconda3\envs\kdvenv\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\HP\anaconda3\envs\kdvenv\lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "app.py", line 44, in predictRoute
+    result = clApp.classifier.predict()
+  File "e:\kidneydiseaseclassfication\src\cnnClassifier\pipeline\prediction.py", line 16, in predict
+    model = load_model(os.path.join("model", "model.h5"))
+  File "C:\Users\HP\anaconda3\envs\kdvenv\lib\site-packages\keras\saving\saving_api.py", line 212, in load_model
+    return legacy_sm_saving_lib.load_model(
+  File "C:\Users\HP\anaconda3\envs\kdvenv\lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\HP\anaconda3\envs\kdvenv\lib\site-packages\keras\saving\legacy\save.py", line 230, in load_model
+    raise IOError(
+OSError: No file or directory found at model\model.h5
+[2024-03-01 21:05:49,461: INFO: _internal: 127.0.0.1 - - [01/Mar/2024 21:05:49] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2024-03-04 18:22:36,147: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.43.186:8080]
+[2024-03-04 18:22:36,148: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-03-04 18:22:44,271: INFO: _internal: 127.0.0.1 - - [04/Mar/2024 18:22:44] "GET / HTTP/1.1" 200 -]
+[2024-03-04 18:23:03,517: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\HP\anaconda3\envs\kdvenv\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\HP\anaconda3\envs\kdvenv\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\HP\anaconda3\envs\kdvenv\lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\HP\anaconda3\envs\kdvenv\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\HP\anaconda3\envs\kdvenv\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\HP\anaconda3\envs\kdvenv\lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "app.py", line 44, in predictRoute
+    result = clApp.classifier.predict()
+  File "e:\kidneydiseaseclassfication\src\cnnClassifier\pipeline\prediction.py", line 16, in predict
+    model = load_model(os.path.join("model", "model.h5"))
+  File "C:\Users\HP\anaconda3\envs\kdvenv\lib\site-packages\keras\saving\saving_api.py", line 212, in load_model
+    return legacy_sm_saving_lib.load_model(
+  File "C:\Users\HP\anaconda3\envs\kdvenv\lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\HP\anaconda3\envs\kdvenv\lib\site-packages\keras\saving\legacy\save.py", line 230, in load_model
+    raise IOError(
+OSError: No file or directory found at model\model.h5
+[2024-03-04 18:23:03,552: INFO: _internal: 127.0.0.1 - - [04/Mar/2024 18:23:03] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2024-03-04 18:33:20,212: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-03-04 18:33:20,215: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-03-04 18:33:20,232: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-03-04 18:33:20,235: INFO: common: created directory at: artifacts]
+[2024-03-04 18:33:20,237: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-03-04 18:33:20,237: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-03-04 18:35:06,972: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-03-04 18:35:08,751: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-03-04 18:35:08,752: INFO: main: *******************]
+[2024-03-04 18:35:08,753: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2024-03-04 18:35:08,760: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-03-04 18:35:08,768: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-03-04 18:35:08,768: INFO: common: created directory at: artifacts]
+[2024-03-04 18:35:08,770: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-03-04 18:35:09,901: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-03-04 18:35:10,995: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2024-03-04 18:35:10,997: INFO: main: *******************]
+[2024-03-04 18:35:10,997: INFO: main: >>>>>> stage Training started <<<<<<]
+[2024-03-04 18:35:11,003: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-03-04 18:35:11,010: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-03-04 18:35:11,012: INFO: common: created directory at: artifacts]
+[2024-03-04 18:35:11,014: INFO: common: created directory at: artifacts\training]
+[2024-03-04 18:36:17,831: INFO: main: >>>>>> stage Training completed <<<<<<
+
+x==========x]
+[2024-03-04 18:36:17,833: INFO: main: *******************]
+[2024-03-04 18:36:17,833: INFO: main: >>>>>> stage Evaluation stage started <<<<<<]
+[2024-03-04 18:36:17,838: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-03-04 18:36:17,840: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-03-04 18:36:17,841: INFO: common: created directory at: artifacts]
+[2024-03-04 18:36:17,899: ERROR: main: No file or directory found at E:/KidneyDiseaseclassfication/artifacts/training/model.h5]
+Traceback (most recent call last):
+  File "main.py", line 52, in <module>
+    model_evalution.main()
+  File "e:\kidneydiseaseclassfication\src\cnnClassifier\pipeline\stage_04_model_evaluation.py", line 18, in main
+    evaluation.evaluation()
+  File "e:\kidneydiseaseclassfication\src\cnnClassifier\components\model_evaluation_mlflow.py", line 46, in evaluation
+    self.model = self.load_model(self.config.path_of_model)
+  File "e:\kidneydiseaseclassfication\src\cnnClassifier\components\model_evaluation_mlflow.py", line 42, in load_model
+    return tf.keras.models.load_model(path)
+  File "C:\Users\HP\anaconda3\envs\kdvenv\lib\site-packages\keras\saving\saving_api.py", line 212, in load_model
+    return legacy_sm_saving_lib.load_model(
+  File "C:\Users\HP\anaconda3\envs\kdvenv\lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\HP\anaconda3\envs\kdvenv\lib\site-packages\keras\saving\legacy\save.py", line 230, in load_model
+    raise IOError(
+OSError: No file or directory found at E:/KidneyDiseaseclassfication/artifacts/training/model.h5
+[2024-03-04 18:38:13,735: INFO: common: yaml file: E:\KidneyDiseaseclassfication\config\config.yaml loaded successfully]
+[2024-03-04 18:38:13,741: INFO: common: yaml file: E:\KidneyDiseaseclassfication\params.yaml loaded successfully]
+[2024-03-04 18:38:23,188: INFO: common: yaml file: E:\KidneyDiseaseclassfication\config\config.yaml loaded successfully]
+[2024-03-04 18:38:23,193: INFO: common: yaml file: E:\KidneyDiseaseclassfication\params.yaml loaded successfully]
+[2024-03-04 18:40:00,767: INFO: common: yaml file: E:\KidneyDiseaseclassfication\config\config.yaml loaded successfully]
+[2024-03-04 18:40:00,775: INFO: common: yaml file: E:\KidneyDiseaseclassfication\params.yaml loaded successfully]
+[2024-03-04 18:44:43,119: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-03-04 18:44:43,121: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-03-04 18:44:43,123: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-03-04 18:44:43,124: INFO: common: created directory at: artifacts]
+[2024-03-04 18:44:43,125: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-03-04 18:44:43,126: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-03-04 18:46:18,837: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-03-04 18:46:19,964: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-03-04 18:46:19,965: INFO: main: *******************]
+[2024-03-04 18:46:19,966: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2024-03-04 18:46:19,969: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-03-04 18:46:19,976: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-03-04 18:46:19,978: INFO: common: created directory at: artifacts]
+[2024-03-04 18:46:19,980: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-03-04 18:46:20,567: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-03-04 18:46:21,351: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2024-03-04 18:46:21,353: INFO: main: *******************]
+[2024-03-04 18:46:21,353: INFO: main: >>>>>> stage Training started <<<<<<]
+[2024-03-04 18:46:21,355: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-03-04 18:46:21,360: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-03-04 18:46:21,362: INFO: common: created directory at: artifacts]
+[2024-03-04 18:46:21,368: INFO: common: created directory at: artifacts\training]
+[2024-03-04 18:47:15,222: INFO: main: >>>>>> stage Training completed <<<<<<
+
+x==========x]

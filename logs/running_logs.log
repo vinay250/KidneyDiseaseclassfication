@@ -544,3 +544,8 @@ x==========x]
 [2024-03-04 18:47:15,222: INFO: main: >>>>>> stage Training completed <<<<<<
 
 x==========x]
+[2024-03-04 19:06:46,070: INFO: common: yaml file: E:\KidneyDiseaseclassfication\config\config.yaml loaded successfully]
+[2024-03-04 19:06:46,092: INFO: common: yaml file: E:\KidneyDiseaseclassfication\params.yaml loaded successfully]
+[2024-03-04 19:07:06,867: INFO: common: json file saved at: E:\KidneyDiseaseclassfication\scores.json]
+[2024-03-04 19:07:14,046: WARNING: save: Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2024-03-04 19:07:15,571: INFO: builder_impl: Assets written to: C:\Users\HP\AppData\Local\Temp\tmpnho0wpn3\model\data\model\assets]

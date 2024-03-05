@@ -3,7 +3,7 @@ import os
 from flask_cors import CORS, cross_origin
 from cnnClassifier.utils.common import decodeImage
 from cnnClassifier.pipeline.prediction import PredictionPipeline
-
+from keras.models import load_model
 
 
 os.putenv('LANG', 'en_US.UTF-8')
@@ -18,6 +18,14 @@ class ClientApp:
         self.filename = "inputImage.jpg"
         self.classifier = PredictionPipeline(self.filename)
 
+
+# Get the absolute path to the model file
+model_path = os.path.abspath("E:/KidneyDiseaseclassfication/artifacts/training/model.h5")
+
+if not os.path.exists(model_path):
+    raise FileNotFoundError(f"Model file not found at path: {model_path}")
+
+model = load_model(model_path)
 
 @app.route("/", methods=['GET'])
 @cross_origin()
